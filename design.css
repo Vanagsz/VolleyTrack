@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Changa:wght@200..800&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Azeret Mono", monospace;
+    color: white;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    width: 30%;
+    height: 80%;
+    background-color: rgb(46, 46, 46);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#sign-up{
+    font-size: 70px;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.input{
+    height: 30px;
+    border-radius: 40px;
+    border: none;
+    background-color: rgb(27, 27, 27);
+}
