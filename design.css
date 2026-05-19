@@ -5,14 +5,26 @@ body{
     padding: 0px;
     font-family: "Azeret Mono", monospace;
     color: white;
+    background-color: #19181d;
 }
 
 .container{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+.logo-upper{
+    display: flex;
+    justify-content: center;
+}
+
+.text-logo{
+    color: rgb(255, 255, 255);
+    
 }
 
 .login-container{
@@ -24,6 +36,7 @@ body{
     height: 80%;
     background-color: rgb(46, 46, 46);
     border-radius: 25px;
+
 }
 
 @media (max-width: 768px){
@@ -40,7 +53,6 @@ body{
     #sign-up{
         font-size: 60px;
     }
-    
 }
 
 .forms{
@@ -50,21 +62,24 @@ body{
 }
 
 .input{
+    display: flex;
     height: 30px;
-    border-radius: 40px;
-    border: none;
+    border-radius: 6px;
+    border: 2px solid #373737;
     background-color: rgb(27, 27, 27);
     color: white;
+    text-align: left;
 }
 
 .submit{
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     color: white;
-    
 }
 
 .label{
-    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .sign-up-btn{
@@ -84,10 +99,18 @@ body{
 }
 
 .sign-up-btn:hover {
-    background-color: #F2F2F2;
+    background-color: #e4e4e4;
+    border: 2.5px solid #e4e4e4;
     box-shadow: 0px 0px 20px -18px;
 }
   
 .sign-up-btn:active {
     transform: scale(0.95);
+}
+
+.log-in-btn{
+    color: grey;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
