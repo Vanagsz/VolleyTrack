@@ -16,18 +16,31 @@ body{
 }
 
 .login-container{
-    width: 30%;
-    height: 80%;
-    background-color: rgb(46, 46, 46);
-    border-radius: 25px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 30%;
+    height: 80%;
+    background-color: rgb(46, 46, 46);
+    border-radius: 25px;
+}
+
+@media (max-width: 768px){
+    .login-container{
+        width: 80%;
+    }  
 }
 
 #sign-up{
     font-size: 70px;
+}
+
+@media (max-width: 768px){
+    #sign-up{
+        font-size: 60px;
+    }
+    
 }
 
 .forms{
@@ -41,4 +54,40 @@ body{
     border-radius: 40px;
     border: none;
     background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+.submit{
+    background-color: black;
+    color: white;
+    
+}
+
+.label{
+    font-weight: bold;
+}
+
+.sign-up-btn{
+    width: fit-content;
+    min-width: 100px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2.5px solid #E0E1E4;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.sign-up-btn:hover {
+    background-color: #F2F2F2;
+    box-shadow: 0px 0px 20px -18px;
+}
+  
+.sign-up-btn:active {
+    transform: scale(0.95);
 }
