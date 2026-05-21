@@ -1,13 +1,13 @@
 <?php
     class RegisterUser{
-        private $username;
-        private $raw_password;
-        private $encrypted_password;
-        public $error;
-        public $success;
+        private $username = "";
+        private $raw_password = "";
+        private $encrypted_password = "";
+        public $error = "";
+        public $success = "";
         private $storage = "data.json";
-        private $stored_users;
-        private $new_user;
+        private $stored_users = "";
+        private $new_user = "";
 
         public function __construct($username, $password){
 
