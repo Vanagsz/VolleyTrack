@@ -18,8 +18,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="navbar">
-            <img src="" alt="Volleytrack logo">
+        <div class="sidebar">
+            <img src="VolleyTrack.png" alt="Volleytrack logo" class="logo">
+
             <div class="buttons-container-nav">
                 <a href="" class="btn-design">Start game</a> 
                 <a href="" class="btn-design">Game history</a> 
