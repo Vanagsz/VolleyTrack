@@ -20,3 +20,32 @@ body{
     background-color: #222127;
 }
 
+.buttons-container-nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.btn-design{
+    display: inline-block;
+    padding: 15px 23px;
+    text-decoration: none;
+    color: white;
+    background-color: #131314;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-design:hover {
+    background-color: #131314;
+    box-shadow: 0 0 13px rgb(46, 143, 255);
+    outline: none;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+
