@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['user'])){
+        header("location: login.php"); exit();
+    }
+    if(isset($_GET['logout'])){
+        unset($_SESSION['user']);
+        header("location: login.php"); exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +19,16 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <div class="logo">VolleyTrack</div>           
-            <svg width="40px" height="50px" viewBox="0 0 14 14" id="meteor-icon-kit__solid-bars-s" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 3.5C0.67157 3.5 0 2.82843 0 2C0 1.17157 0.67157 0.5 1.5 0.5H12.5C13.3284 0.5 14 1.17157 14 2C14 2.82843 13.3284 3.5 12.5 3.5H1.5zM1.5 8.5C0.67157 8.5 0 7.8284 0 7C0 6.1716 0.67157 5.5 1.5 5.5H12.5C13.3284 5.5 14 6.1716 14 7C14 7.8284 13.3284 8.5 12.5 8.5H1.5zM1.5 13.5C0.67157 13.5 0 12.8284 0 12C0 11.1716 0.67157 10.5 1.5 10.5H12.5C13.3284 10.5 14 11.1716 14 12C14 12.8284 13.3284 13.5 12.5 13.5H1.5z" fill="#ffffff"></path></g></svg>
-
+            <img src="" alt="Volleytrack logo">
+            <div class="buttons-container-nav">
+                <a href="" class="btn-design">Start game</a> 
+                <a href="" class="btn-design">Game history</a> 
+                <a href="?settings" class="btn-design">Settings</a>     
+                <a href="?logout" class="btn-design">Logout</a>
+            </div>
+        </div>
+        <div class="main-container">
+            <h1>Welcome, <?php echo $_SESSION['user']?>.</h1>
         </div>
     </div>
 </body>
