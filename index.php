@@ -21,14 +21,12 @@
                 <div class="forms">
                     <label for="username" class="label">Username</label>
                     <input type="text" placeholder="Enter a unique username" name="username" required class="input">
-                    <label for="email" class="label">Email</label>
-                    <input type="text" placeholder="ex. example@gmail.com" name="email" required class="input">
                     <label for="password" class="label">Password</label>
                     <input type="password" placeholder="Enter Password" name="password" required class="input">
                 </div>
                 <div class="submit">
                     <button type="submit" name="submit" class="sign-up-btn">Sign-up</button>
-                    <button type="button" class="log-in-btn">Log-in</button>
+                    <a href="login.php" class="log-in-btn">Log-in</a>
                     <p class="error"><?php echo @$user->error ?></p>
                     <p class="success"><?php echo @$user->success ?></p>
                 </div>
