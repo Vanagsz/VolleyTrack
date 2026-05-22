@@ -5,7 +5,7 @@ body{
     padding: 0px;
     font-family: "Azeret Mono", monospace;
     color: white;
-    background-color: #19181d;
+    background-color: #06070e;
 }
 
 .container{
@@ -18,10 +18,11 @@ body{
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #222127;
+    background-color: #06070e;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-right: #3D444D 0.5px solid;
 }
 
 .logo {
@@ -41,22 +42,27 @@ body{
 }
 
 .btn-design{
-    display: inline-block;
     width: 180px;
     padding: 15px 0;
     text-align: center;
     text-decoration: none;
     color: white;
-    background-color: #131314;
     border-radius: 10px;
-    transition: 
-    background-color 0.2s ease,
-    transform 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
+.user-profile-inner svg {
+    width: 27px;
+    height: 27px;
+  }
+
 .btn-design:hover {
-    background-color: #131314;
-    box-shadow: 0 0 13px rgb(46, 143, 255);
+    background-color: #266e97;
+    box-shadow: 0 0 13px #38B6FF;
     outline: none;
     transform: translateY(-2px);
 }
@@ -65,13 +71,61 @@ body{
     transform: scale(0.98);
 }
 
-.main-container{
+.container-main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 85%;
 }
 
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    gap: 600px;
+}
 
+.welcome-section{
+    display: flex;
+    flex-direction: column;
+}
 
+.welcome-msg{
+    font-weight: bold;
+    font-size: 35px;
+}
 
+.action-section{
+    display: flex;
+    align-items: center;
+}
 
+.previous-games{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    border: #3D444D solid 2px;
+    background-color: #151B23;
+    border-radius: 13px;
+    width: 90%;
+    height: 40%;
+    gap: 20px;
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.game-history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 98%;
+    height: 60px;
+    border-radius: 10px;
+}
