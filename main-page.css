@@ -15,6 +15,10 @@ body{
     height: 100vh;
 }
 
+.side-bar-open-svg{
+    display: none;
+}
+
 .sidebar {
     width: 250px;
     height: 100vh;
@@ -30,44 +34,67 @@ body{
     max-width: 180px;
     height: auto;
     object-fit: contain;
-    margin-bottom: 40px;
 }
 
 .buttons-container-nav {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     width: 100%;
     align-items: center;
 }
 
 .btn-design{
     width: 180px;
-    padding: 15px 0;
+    padding: 13px 0;
     text-align: center;
     text-decoration: none;
     color: white;
     border-radius: 10px;
     transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.user-profile-inner {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+    justify-content: left;
+    gap: 8px;             
 }
 
 .user-profile-inner svg {
-    width: 27px;
-    height: 27px;
+    width: 21px;
+    height: 21px;
   }
 
 .btn-design:hover {
-    background-color: #266e97;
+    background-color: #38B6FF;
+    color: #ffff;
     box-shadow: 0 0 13px #38B6FF;
     outline: none;
     transform: translateY(-2px);
 }
 
 .btn-design:active {
+    transform: scale(0.98);
+}
+
+.btn-design-2{
+    width: 180px;
+    padding: 13px 0;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: #3D444D solid 2px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-design-2:hover {
+    background-color: #47494b;
+    color: #ffff;
+    outline: none;
+}
+
+.btn-design-2:active {
     transform: scale(0.98);
 }
 
@@ -101,16 +128,39 @@ body{
     align-items: center;
 }
 
+.image-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 95%;
+    height: 30%;
+    
+}
+
+.img{
+    width: 95%;
+    border-radius: 13px;
+}
+
 .previous-games{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     border: #3D444D solid 2px;
-    background-color: #151B23;
+    background-color: #050E1C;
     border-radius: 13px;
     width: 90%;
     height: 40%;
     gap: 20px;
+}
+
+.previous-games-align{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: space-between;
 }
 
 .game-container{
@@ -122,10 +172,47 @@ body{
 
 .game-history{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: black;
+    background-color: #091322;
     width: 98%;
     height: 60px;
     border-radius: 10px;
+    border: #3D444D solid 2px;
+}
+
+.points{
+    font-weight: bold;
+}
+
+.date-time{
+    color: grey;
+}
+
+.winner{
+    padding: 4px;
+    color: #00ff9d;
+    background-color: #082621;
+    border-radius: 12px;
+}
+
+/*Media tags*/
+
+@media (max-width: 768px){
+
+    .action-section{
+        display: none;
+    }
+
+    .side-bar-open-svg{
+        display: block;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .image-container{
+        width: 500px;
+    }
 }
