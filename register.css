@@ -5,7 +5,7 @@ body{
     padding: 0px;
     font-family: "Azeret Mono", monospace;
     color: white;
-    background-color: #19181d;
+    background-color: #06070e;
 }
 
 .container{
@@ -33,9 +33,9 @@ body{
     justify-content: space-evenly;
     width: 25%;
     height: 70%;
-    background-color: rgb(46, 46, 46);
+    background-color: #050E1C;
     border-radius: 13px;
-    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+    border: #20648b solid 2px;
 
 }
 
@@ -45,21 +45,26 @@ body{
     }  
 }
 
-#sign-up{
-    color: #585858;
-    font-size: 70px;
-}
-
-@media (max-width: 768px){
-    #sign-up{
-        font-size: 60px;
-    }
-}
-
 .forms{
     display: flex;
     flex-direction: column;
     width: 60%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.logo {
+    width: 80%;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
 }
 
 .input{
@@ -75,7 +80,8 @@ body{
 .submit{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
     color: white;
 }
 
@@ -83,30 +89,28 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.sign-up-btn{
-    width: fit-content;
-    min-width: 100px;
-    height: 45px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2.5px solid #E0E1E4;
-    box-shadow: 0px 0px 20px -20px;
-    cursor: pointer;
-    background-color: white;
-    transition: all 0.2s ease-in-out 0ms;
-    user-select: none;
-    font-family: 'Poppins', sans-serif;
+.btn-design{
+    width: 180px;
+    padding: 13px 0;
+    text-align: center;
+    text-decoration: none;
     font-weight: bold;
+    color: white;
+    background-image: linear-gradient(to bottom, #38B6FF 0%, #112786 100%);
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.sign-up-btn:hover {
-    background-color: #e4e4e4;
-    border: 2.5px solid #e4e4e4;
-    box-shadow: 0px 0px 20px -18px;
+.btn-design:hover {
+    color: #ffff;
+    box-shadow: 0 0 13px #06a4ff;
+    outline: none;
+    transform: translateY(-2px);
 }
-  
-.sign-up-btn:active {
-    transform: scale(0.95);
+
+.btn-design:active {
+    transform: scale(0.98);
 }
 
 .log-in-btn{

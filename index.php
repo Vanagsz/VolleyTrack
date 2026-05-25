@@ -17,7 +17,10 @@
 <body>
     <div class="container">
         <form class="login-container" action="" method="post" enctype="multipart/form-data" autocomplete="off">
-                <div id="sign-up">Sign-up</div>
+                <div class="info">
+                    <img src="VolleyTrack.png" alt="logo" class="logo">
+                    <p>Log into your account</p>
+                </div>
                 <div class="forms">
                     <label for="username" class="label">Username</label>
                     <input type="text" placeholder="Enter a unique username" name="username" required class="input">
@@ -25,8 +28,10 @@
                     <input type="password" placeholder="Enter Password" name="password" required class="input">
                 </div>
                 <div class="submit">
-                    <button type="submit" name="submit" class="sign-up-btn">Sign-up</button>
+                    <button type="submit" name="submit" class="btn-design">Sign-up</button>
                     <a href="login.php" class="log-in-btn">Log-in</a>
+                </div>
+                <div>
                     <p class="error"><?php echo @$user->error ?></p>
                     <p class="success"><?php echo @$user->success ?></p>
                 </div>
