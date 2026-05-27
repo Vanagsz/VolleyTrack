@@ -198,6 +198,24 @@ body{
     border-radius: 12px;
 }
 
+/*Point counter uis*/
+    .point-counter-container{
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .point-counter{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .add-remove-btn{
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
 /*Media tags*/
 
 @media (max-width: 768px){
