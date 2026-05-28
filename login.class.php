@@ -24,8 +24,8 @@
                     header("location: mainpage.php"); exit();
                 }
             }
-            return $this->error = "Wrong username or password";
         }
+        return $this->error = "Wrong username or password";
     }
 }
 ?>

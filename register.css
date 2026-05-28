@@ -39,12 +39,6 @@ body{
 
 }
 
-@media (max-width: 768px){
-    .login-container{
-        width: 80%;
-    }  
-}
-
 .forms{
     display: flex;
     flex-direction: column;
@@ -123,4 +117,13 @@ body{
 .log-in-btn:hover{
     color: rgb(172, 172, 192);
     text-decoration: underline;
+}
+
+@media screen and (max-width: 767px){
+    .login-container{
+        width: 95%;
+        height: 50%;
+    }
+
+
 }

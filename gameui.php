@@ -40,27 +40,27 @@
             </div>
         </div>
         <div class="container-main">
-            <div class="top-bar">
-                <svg class="side-bar-open-svg" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                </svg>
-
+            <div class="chronometer">
+                <div id="stopWatch">
+                    <span id="seconds">00s</span>
+                    <span id="milliseconds">000</span>
+                </div>
             </div>
             <div class="point-counter-container">
                 <div class="team-points">
                     <p>TEAM 1</p>
                     <div class="point-counter">
-                        <button onclick="removePoints()" class="add-remove-btn">-</button>
+                        <button onclick="removePoints1()" class="add-remove-btn">-</button>
                         <p id="points">0</p>
-                        <button onclick="addPoints()" class="add-remove-btn">+</button>
+                        <button onclick="addPoints1()" class="add-remove-btn">+</button>
                     </div>
                 </div>
                 <div class="team-points">
                     <p>TEAM 2</p>
                     <div class="point-counter">
-                        <button onclick="removePoints()" class="add-remove-btn">-</button>
-                        <p id="points">0</p>
-                        <button onclick="addPoints()" class="add-remove-btn">+</button>
+                        <button onclick="removePoints2()" class="add-remove-btn">-</button>
+                        <p id="points2">0</p>
+                        <button onclick="addPoints2()" class="add-remove-btn">+</button>
                     </div>
                 </div>
             </div>
