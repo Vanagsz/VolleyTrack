@@ -61,7 +61,16 @@
 
             </div>
             <div class="image-container">
-                <img src="el-gato.jpg" alt="volleytrack-banner" class="img">
+                <div id="pop-up-teams">
+                Please input the team names!
+                <div>
+                    <input type="text" placeholder="team 1" id="team1">
+                    <input type="text" placeholder="team 2" id="team2">
+                </div>
+                <div>
+                    <button id="pop-up-btn" onclick="teamnames()">Start game!</button>
+                </div>
+                </div>
             </div>
             <div class="previous-games">
                 <div class="previous-games-align">

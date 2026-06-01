@@ -40,16 +40,6 @@
             </div>
         </div>
         <div class="container-main">
-            <div id="pop-up-teams">
-                Please input the team names!
-                <div>
-                    <input type="text" placeholder="team 1" id="team1">
-                    <input type="text" placeholder="team 2" id="team2">
-                </div>
-                <div>
-                    <button id="pop-up-btn" onclick="teamnames()">Start game!</button>
-                </div>
-            </div>
             <div class="chronometer">
                 <div id="stopWatch">
                     <span id="seconds">00s</span>

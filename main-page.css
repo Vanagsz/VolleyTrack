@@ -142,6 +142,9 @@ body{
     margin-top: 20px;
     width: 95%;
     height: 30%;
+    background-color: #040E1B;
+    border: 2px solid #0c2649;
+    border-radius: 10px;
     
 }
 
@@ -157,7 +160,7 @@ body{
     border: #3D444D solid 2px;
     background-color: #050E1C;
     border-radius: 13px;
-    width: 90%;
+    width: 95%;
     height: 40%;
     gap: 20px;
 }
@@ -206,16 +209,11 @@ body{
 
 /*Point counter uis*/
 #pop-up-teams{
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    padding: 240px 160px;
-    background-color: #040E1B;
-    border: 2px solid #0c2649;
-    border-radius: 10px;
 }
 
 #pop-up-btn{
