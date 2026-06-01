@@ -105,3 +105,22 @@ function removePoints2() {
         updateCount();
     }
   }
+
+
+  function teamnames(){
+    var label1 = document.getElementById("t1label");
+    var label2 = document.getElementById("t2label");
+    var x = document.getElementById("pop-up-teams");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+         var input1 = document.getElementById("team1");
+         var input2 = document.getElementById("team2");
+         var newText1 = input1.value;
+         var newText2 = input2.value;
+        
+        label1.innerHTML = newText1;
+        label2.innerHTML = newText2;
+}

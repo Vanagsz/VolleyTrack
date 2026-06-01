@@ -127,3 +127,8 @@ body{
 
 
 }
+@media screen and (min-width: 1024px){
+    .log-in-container{
+        width: 400px;
+    }
+}

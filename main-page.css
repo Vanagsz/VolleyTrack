@@ -205,11 +205,29 @@ body{
 }
 
 /*Point counter uis*/
-.pop-up-teams{
+#pop-up-teams{
     position: absolute;
-    background-color: black;
-    padding: 240px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 240px 160px;
+    background-color: #040E1B;
+    border: 2px solid #0c2649;
     border-radius: 10px;
+}
+
+#pop-up-btn{
+    background-image: linear-gradient(to bottom, #38B6FF 0%, #112786 100%);
+    width: 180px;
+    padding: 13px 0;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 input{

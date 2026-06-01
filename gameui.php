@@ -40,14 +40,15 @@
             </div>
         </div>
         <div class="container-main">
-            <div class="pop-up-teams">
+            <div id="pop-up-teams">
                 Please input the team names!
                 <div>
                     <input type="text" placeholder="team 1" id="team1">
                     <input type="text" placeholder="team 2" id="team2">
-                    <button class="btn-design">Start game!</button>
                 </div>
-
+                <div>
+                    <button id="pop-up-btn" onclick="teamnames()">Start game!</button>
+                </div>
             </div>
             <div class="chronometer">
                 <div id="stopWatch">
@@ -59,7 +60,7 @@
                 </div>
             <div class="point-counter-container">
                 <div class="team-points">
-                    <p>TEAM 1</p>
+                    <p id="t1label">TEAM 1</p>
                     <div class="point-counter">
                         <button onclick="removePoints1()" class="add-remove-btn">-</button>
                         <p class="point-design" id="points">0</p>
@@ -67,7 +68,7 @@
                     </div>
                 </div>
                 <div class="team-points">
-                    <p>TEAM 2</p>
+                    <p id="t2label">TEAM 2</p>
                     <div class="point-counter">
                         <button onclick="removePoints2()" class="add-remove-btn">-</button>
                         <p class="point-design" id="points2">0</p>
