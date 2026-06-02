@@ -1,10 +1,15 @@
 <?php
-    function storeData($teama, $teamb, $time, $teamascore $teambscore)
-    $new_game = [
-        "team 1" => $teama,
-        "team 1 score" => $teamascore,
-        "team 2" => $teamb,
-        "team 2 score" => $teambscore,
-        "time" => $time,
-    ]
+
+    if (isset($_POST['team1'], $_POST['team2']))
+    {
+        $_SESSION['team1'] = $_POST['team1'];
+        $_SESSION['team2'] = $_POST['team2'];
+
+        header("location: gameui.php");
+        exit();
+    }
+
+    header("location: mainpage.php");
+    exit();
+
 ?>

@@ -8,6 +8,11 @@ body{
     background-color: #080913;
 }
 
+.light-mode{
+    color: black;
+    background-color: white;
+}
+
 .container{
     display: flex;
     justify-content: space-between;
@@ -171,25 +176,6 @@ body{
     height: 24px;
   }
   
-  @keyframes tilt {
-   
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    25% {
-      transform: rotate(-10deg);
-    }
-  
-    75% {
-      transform: rotate(10deg);
-    }
-  
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  
   .input:checked + .slider {
     background-color: #183153;
   }
@@ -202,6 +188,35 @@ body{
     transform: translateX(30px);
   }
 
+  #pop-up-teams{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+#pop-up-btn{
+    background-image: linear-gradient(to bottom, #38B6FF 0%, #112786 100%);
+    width: 180px;
+    padding: 13px 0;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+input{
+    height: 30px;
+    border-radius: 6px;
+    border: 2px solid #373737;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    text-align: left;
+}
 /*Main ui*/
 
 .container-main{
@@ -308,71 +323,136 @@ body{
 }
 
 /*Point counter uis*/
-#pop-up-teams{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
 
-#pop-up-btn{
-    background-image: linear-gradient(to bottom, #38B6FF 0%, #112786 100%);
-    width: 180px;
-    padding: 13px 0;
+.live-indicator{
     text-align: center;
-    text-decoration: none;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #00ff9d;
 }
 
-input{
-    height: 30px;
-    border-radius: 6px;
-    border: 2px solid #373737;
-    background-color: rgb(27, 27, 27);
-    color: white;
-    text-align: left;
+.match-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 24px;
 }
 
-.chronometer{
+.card{
+    background: linear-gradient(180deg, rgba(9,18,42,.95), rgba(3,8,25,.95));
+    border: 1px solid;
+    border-radius: 9px;
+    padding: 28px;
+}
+
+
+.team-card{
+    text-align: center;
+}
+
+.team1{
+    border: 1px solid rgba(37,99,235,.5);
+}
+
+.team2{
+    border: 1px solid rgba(239,68,68,.5);
+}
+
+.team-name{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.score-box{
+    height: 200px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.08);
 }
 
-.point-counter-container{
+.score{
+    font-size: 120px;
+    font-weight: 800;
+}
+
+.score-buttons{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 80%;
-    height: 40%;
+    justify-content: center;
+    gap: 20px;
 }
 
-.team-points{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 130px;
-    padding: 50px 50px;
-    background-color: #06070e;
-    border: #3D444D solid 2px;
-    border-radius: 10px;
-}
-
-.point-counter{
-    display: flex;
-    flex-direction: row;
-}
-
-.add-remove-btn{
-    background-color: transparent;
+.score-btn{
+    width: 90px;
+    height: 70px;
+    border-radius: 16px;
+    background: transparent;
+    font-size: 42px;
     color: white;
-    border: none;
     cursor: pointer;
+}
+
+.blue-btn{
+    border: 1px solid rgba(37,99,235,.5);
+    box-shadow: 0 0 20px rgba(37,99,235,.5);
+}
+
+.red-btn{
+    border: 1px solid rgba(239,68,68,.5);
+
+    box-shadow: 0 0 20px rgba(239,68,68,.5);
+}
+
+.score-btn:hover{
+    transform: translateY(-2px);
+}
+
+.timer-card{
+    text-align: center;
+}
+
+.timer-title{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.timer{
+    font-size: 100px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.timer-controls{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.timer-btn{
+    width: 100px;
+    height: 110px;
+    border:none;
+    background :rgba(255,255,255,.04);
+    border-radius: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.end-game-btn{
+    margin-top: 30px;
+    width: 650px;
+    height: 90px;
+    border: none;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #ef4444 0%, #701515 100%);
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    cursor:pointer;
+    box-shadow: 0 0 50px rgba(239,68,68,.4);
 }
 /*Media tags*/
 
