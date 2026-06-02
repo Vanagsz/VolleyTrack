@@ -67,12 +67,12 @@
             <div class="image-container">
                 <div id="pop-up-teams">
                 Please input the team names!
+                <form action="gamestuff.php" method="post">
+                    <input type="text" placeholder="team 1" name="team1">
+                    <input type="text" placeholder="team 2" name="team2">
+                </form>
                 <div>
-                    <input type="text" placeholder="team 1" id="team1">
-                    <input type="text" placeholder="team 2" id="team2">
-                </div>
-                <div>
-                    <button id="pop-up-btn" onclick="teamnames()">Start game!</button>
+                    <button id="pop-up-btn" type="submit">Start game!</button>
                 </div>
                 </div>
             </div>
