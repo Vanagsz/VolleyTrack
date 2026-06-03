@@ -210,12 +210,12 @@ body{
 }
 
 input{
-    height: 30px;
+    height: 40px;
+    width: 100%;
     border-radius: 6px;
-    border: 2px solid #373737;
-    background-color: rgb(27, 27, 27);
+    border: 1px solid rgba(37, 99, 235, 0.35);
+    background-color: transparent;
     color: white;
-    text-align: left;
 }
 /*Main ui*/
 

@@ -1,5 +1,5 @@
 <?php
-    
+    include ("gamestuff.php");
     session_start();
     if(!isset($_SESSION['user'])){
         header("location: login.php"); exit();
@@ -8,14 +8,6 @@
         unset($_SESSION['user']);
         header("location: login.php"); exit();
     }
-    if (!isset($_SESSION['team1'], $_SESSION['team2']))
-    {
-    header("location: mainpage.php");
-    exit();
-    }
-
-    $team1 = $_SESSION['team1'];
-    $team2 = $_SESSION['team2'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +44,7 @@
     <div class="live-indicator">● LIVE MATCH</div>
     <div class="match-grid">
         <div class="card team-card team1">
-            <h2><?php echo htmlspecialchars($team1); ?></h2>
+            <h3><?php echo $_POST['team1']; ?></h3>
             <div class="score" id="score1">0</div>
             <button class="score-btn blue-btn" onclick="changeScore()">-</button>
             <button class="score-btn blue-btn" onclick="changeScore()">+</button>
@@ -71,7 +63,7 @@
             </button>
         </div>
         <div class="card team-card team2">
-            <h2><?php echo htmlspecialchars($team2); ?></h2>
+            <h3><?php echo $_POST['team2']; ?></h3>
             <div class="score" id="score2">0</div>
             <button class="score-btn red-btn" onclick="changeScore()">-</button>
             <button class="score-btn red-btn" onclick="changeScore()">+</button>

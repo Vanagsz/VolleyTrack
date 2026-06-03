@@ -1,4 +1,5 @@
 <?php
+    include ("gamestuff.php");
     session_start();
     if(!isset($_SESSION['user'])){
         header("location: login.php"); exit();
@@ -6,8 +7,7 @@
     if(isset($_GET['logout'])){
         unset($_SESSION['user']);
         header("location: login.php"); exit();
-    }
-    
+    }   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,14 +68,13 @@
             <div class="image-container">
                 <div id="pop-up-teams">
                 Please input the team names!
-                <form action="gamestuff.php" method="post">
+                <form action="gameui.php" method="post">
                     <input type="text" placeholder="team 1" name="team1" required>
                     <input type="text" placeholder="team 2" name="team2" required>
                     <div>
-                        <button id="pop-up-btn" type="submit">Start game!</button>
+                        <button onclick="<?php balz() ?>" id="pop-up-btn" type="submit">Start game!</button>
                     </div>
                 </form>
-               
                 </div>
             </div>
             <div class="previous-games">
