@@ -40,7 +40,7 @@
         }
 
         private function usernameExists(){
-            foreach($this -> $stored_users as $user){
+            foreach($this->stored_users as $user){
                 if($this->username == $user['username']){
                     $this->error = "Username already taken.";
                     return true;
@@ -51,7 +51,7 @@
 
         private function insertUser(){
             if($this->usernameExists() === false){
-                array_push($this -> stored_users, $this->new_user);
+                array_push($this->stored_users, $this->new_user);
                 if(file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))){
                     return $this->success = "Registration complete";
                 }else{

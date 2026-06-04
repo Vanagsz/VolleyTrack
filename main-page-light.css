@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Changa:wght@200..800&display=swap');
+ 
+/* =====================
+   Base styles (light)
+   ===================== */
+ 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Azeret Mono", monospace;
+    color: #0f172a;
+    background-color: #f0f4f8;
+}
+ 
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+ 
+/* =====================
+   Sidebar (light)
+   ===================== */
+ 
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #cbd5e1;
+}
+ 
+.logo {
+    margin-top: 50px;
+    width: 80%;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+ 
+.buttons-container-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+ 
+.toggler-align {
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+ 
+.side-bar-open-svg {
+    display: none;
+    height: 30px;
+    width: 30px;
+}
+ 
+/* =====================
+   Navigation buttons (light)
+   ===================== */
+ 
+.btn-design {
+    width: 180px;
+    padding: 13px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #0f172a;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+    font-family: "Azeret Mono", monospace;
+}
+ 
+.btn-design:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 0 13px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+}
+ 
+.btn-design:active {
+    transform: scale(0.98);
+}
+ 
+.user-profile-inner {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 8px;
+}
+ 
+/* Nav icons — dark stroke for light background */
+.user-profile-inner svg {
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+}
+ 
+.user-profile-inner svg path,
+.user-profile-inner svg circle {
+    stroke: #0f172a;
+}
+ 
+.btn-design:hover .user-profile-inner svg path,
+.btn-design:hover .user-profile-inner svg circle {
+    stroke: #ffffff;
+}
+ 
+.btn-design-2 {
+    width: 130px;
+    padding: 8px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #0f172a;
+    border: #94a3b8 solid 2px;
+    border-radius: 10px;
+    font-size: 13px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+ 
+.btn-design-2:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+ 
+.btn-design-2:active {
+    transform: scale(0.98);
+}
+ 
+/* =====================
+   Toggle switch (light)
+   ===================== */
+ 
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+}
+ 
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+ 
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+}
+ 
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+}
+ 
+.sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+ 
+.moon svg {
+    fill: #2563eb;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+ 
+.input:checked + .slider { background-color: #183153; }
+.input:focus + .slider { box-shadow: 0 0 1px #183153; }
+.input:checked + .slider:before { transform: translateX(30px); }
+ 
+/* =====================
+   Main content area (light)
+   ===================== */
+ 
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+    background-color: #f0f4f8;
+}
+ 
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 30px;
+}
+ 
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+ 
+.welcome-msg {
+    font-weight: bold;
+    font-size: 30px;
+    color: #0f172a;
+}
+ 
+.desc {
+    color: #64748b;
+    font-size: 14px;
+}
+ 
+/* =====================
+   Team name form (light)
+   ===================== */
+ 
+.team-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: #ffffff;
+    border: 2px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+ 
+#pop-up-teams {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+ 
+.form-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1d4ed8;
+    margin: 0;
+}
+ 
+.team-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+ 
+.form-group label {
+    font-size: 13px;
+    color: #475569;
+    font-weight: bold;
+}
+ 
+.form-group input {
+    height: 42px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    background-color: #f8fafc;
+    color: #0f172a;
+    padding: 0 12px;
+    font-family: "Azeret Mono", monospace;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+ 
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+ 
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #eff6ff;
+}
+ 
+#pop-up-btn {
+    height: 42px;
+    padding: 0 24px;
+    background-image: linear-gradient(to bottom, #38B6FF 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: "Azeret Mono", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+ 
+#pop-up-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(37, 99, 235, 0.5);
+}
+ 
+#pop-up-btn:active {
+    transform: scale(0.98);
+}
+ 
+/* =====================
+   Previous games (light)
+   ===================== */
+ 
+.previous-games {
+    display: flex;
+    flex-direction: column;
+    border: #cbd5e1 solid 2px;
+    background-color: #ffffff;
+    border-radius: 13px;
+    width: 90%;
+    min-height: 200px;
+    gap: 10px;
+    padding-bottom: 14px;
+}
+ 
+.previous-games-align {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e8f0;
+    color: #0f172a;
+}
+ 
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0 6px;
+}
+ 
+.game-history {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f8fafc;
+    width: 98%;
+    min-height: 56px;
+    border-radius: 10px;
+    border: #cbd5e1 solid 1px;
+    padding: 8px 0;
+    box-sizing: border-box;
+    color: #0f172a;
+}
+ 
+.game-history svg path {
+    stroke: #0f172a;
+}
+ 
+.points {
+    font-weight: bold;
+    color: #1e40af;
+}
+ 
+.date-time {
+    color: #94a3b8;
+    font-size: 13px;
+}
+ 
+.winner {
+    padding: 4px 8px;
+    color: #059669;
+    background-color: #d1fae5;
+    border-radius: 12px;
+    font-size: 13px;
+}
+ 
+/* =====================
+   Game UI — gameui.php (light)
+   ===================== */
+ 
+.live-indicator {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #059669;
+}
+ 
+.match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+ 
+.card {
+    background: linear-gradient(180deg, #ffffff, #f1f5f9);
+    border-radius: 9px;
+    padding: 28px;
+    min-height: 320px;
+    box-sizing: border-box;
+    color: #0f172a;
+}
+ 
+.team-card {
+    text-align: center;
+    border: 1px solid;
+}
+ 
+.team1 {
+    border-color: rgba(37, 99, 235, 0.5);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.1);
+}
+ 
+.team2 {
+    border-color: rgba(220, 38, 38, 0.5);
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.1);
+}
+ 
+.score {
+    font-size: 120px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    color: #0f172a;
+}
+ 
+.score-btn {
+    width: 90px;
+    height: 70px;
+    border-radius: 16px;
+    background: transparent;
+    font-size: 42px;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+ 
+.score-btn:hover { transform: translateY(-2px); }
+ 
+.blue-btn {
+    border: 1px solid rgba(37, 99, 235, 0.6);
+    box-shadow: 0 0 16px rgba(37, 99, 235, 0.2);
+    color: #1d4ed8;
+}
+ 
+.red-btn {
+    border: 1px solid rgba(220, 38, 38, 0.6);
+    box-shadow: 0 0 16px rgba(220, 38, 38, 0.2);
+    color: #dc2626;
+}
+ 
+/* Timer card */
+.timer-card {
+    text-align: center;
+    border: 1px solid #cbd5e1;
+}
+ 
+.timer {
+    font-size: 60px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+ 
+.timer-btn {
+    width: 100px;
+    height: 90px;
+    border: none;
+    background: #e2e8f0;
+    border-radius: 18px;
+    color: #0f172a;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+ 
+.timer-btn:hover {
+    background: #cbd5e1;
+}
+ 
+/* Timer button icons */
+.timer-btn svg path {
+    stroke: #0f172a;
+}
+ 
+.end-game-wrapper {
+    margin-top: 24px;
+}
+ 
+.end-game-btn {
+    width: 600px;
+    height: 80px;
+    border: none;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #ef4444 0%, #701515 100%);
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Azeret Mono", monospace;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.3);
+    transition: transform 0.2s ease;
+}
+ 
+.end-game-btn:hover {
+    transform: translateY(-2px);
+}
+ 
+/* =====================
+   RESPONSIVE (light)
+   Same breakpoints as dark mode
+   ===================== */
+ 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .sidebar { width: 70px; min-width: 70px; }
+    .logo { width: 50px; margin-top: 24px; }
+    .buttons-container-nav a { font-size: 0; width: 46px; justify-content: center; padding: 12px 0; }
+    .user-profile-inner svg { width: 22px; height: 22px; }
+    .toggler-align { right: 0; }
+    .container-main { padding: 24px 0; }
+    .welcome-msg { font-size: 24px; }
+    .desc { font-size: 12px; }
+    .top-bar { width: 95%; margin-bottom: 20px; }
+    .team-input-container { width: 95%; padding: 24px 0; }
+    .form-group input { width: 160px; }
+    .previous-games { width: 95%; }
+    .date-time { display: none; }
+    .match-grid { gap: 14px; }
+    .card { padding: 18px; min-height: 280px; }
+    .score { font-size: 80px; }
+    .score-btn { width: 70px; height: 55px; font-size: 32px; }
+    .timer { font-size: 42px; }
+    .timer-btn { width: 80px; height: 70px; }
+    .end-game-btn { width: 95%; font-size: 22px; height: 70px; }
+}
+ 
+@media screen and (max-width: 767px) {
+    .container { flex-direction: column; }
+    .sidebar { display: none; }
+    .side-bar-open-svg { display: block; }
+    .container-main { width: 100%; height: auto; min-height: 100vh; padding: 16px 0 40px; overflow-y: auto; }
+    .top-bar { width: 95%; gap: 0; margin-bottom: 16px; }
+    .welcome-msg { font-size: 18px; }
+    .desc { font-size: 11px; }
+    .team-input-container { width: 95%; padding: 20px 12px; box-sizing: border-box; }
+    .team-form { flex-direction: column; align-items: center; gap: 12px; width: 100%; }
+    .form-group { width: 100%; max-width: 300px; }
+    .form-group input { width: 100%; }
+    #pop-up-btn { width: 100%; max-width: 300px; height: 46px; }
+    .previous-games { width: 95%; }
+    .previous-games-align { padding: 10px 14px; }
+    .btn-design-2 { width: 100px; padding: 4px 0; font-size: 11px; }
+    .game-history { flex-wrap: wrap; height: auto; gap: 6px; padding: 10px 6px; justify-content: center; }
+    .points { font-size: 13px; }
+    .date-time { font-size: 10px; }
+    .winner { font-size: 11px; }
+    .match-grid { grid-template-columns: 1fr; gap: 14px; width: 95%; }
+    .card { min-height: unset; padding: 20px; }
+    .score { font-size: 80px; }
+    .score-btn { width: 70px; height: 55px; font-size: 32px; }
+    .timer-card { order: -1; }
+    .timer { font-size: 48px; min-height: 60px; }
+    .timer-btn { width: 80px; height: 70px; }
+    .live-indicator { font-size: 16px; margin-bottom: 12px; }
+    .end-game-wrapper { width: 95%; }
+    .end-game-btn { width: 100%; height: 65px; font-size: 20px; border-radius: 14px; }
+}
+ 
+@media screen and (min-width: 1440px) {
+    .sidebar { width: 280px; min-width: 280px; }
+    .welcome-msg { font-size: 36px; }
+    .team-input-container { max-width: 1100px; }
+    .previous-games { max-width: 1100px; }
+    .form-group input { width: 240px; }
+    .match-grid { gap: 32px; }
+    .card { padding: 36px; }
+    .score { font-size: 140px; }
+    .timer { font-size: 72px; }
+    .end-game-btn { width: 700px; height: 90px; font-size: 32px; }
+}

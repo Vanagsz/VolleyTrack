@@ -2,10 +2,13 @@
 
 $game_data = "game_history.json";
 
+// -------------------------------------
+// startGame() - called when the user submits the team name form
+// Saves team names to the session and redirects to the game UI
+// -------------------------------------
 function startGame()
 {
-    if(isset($_POST['team1'], $_POST['team2']))
-    {
+    if (isset($_POST['team1'], $_POST['team2'])) {
         $_SESSION['team1'] = trim($_POST['team1']);
         $_SESSION['team2'] = trim($_POST['team2']);
 
@@ -14,28 +17,27 @@ function startGame()
     }
 }
 
-function saveGame($team1, $team2, $score1, $score2, $seconds)
+function saveGame($team1, $team2, $score1, $score2, $seconds, $winner)
 {
     global $game_data;
 
+    // Build the record we want to store
     $game = [
-        "team 1" => $team1,
-        "team 2" => $team2,
-        "team 1 score" => $score1,
-        "team 2 score" => $score2,
-        "duration seconds" => $seconds,
-        "duration display" => gmdate("i:s", $seconds),
-        "date" => date("Y-m-d H:i:s")
+        "team1"           => $team1,
+        "team2"           => $team2,
+        "score_team1"     => $score1,
+        "score_team2"     => $score2,
+        "winner"          => $winner,
+        "duration_seconds"=> $seconds,
+        "duration_display"=> gmdate("H:i:s", $seconds),
+        "date"            => date("Y-m-d"),
+        "time"            => date("H:i:s"),
     ];
 
     $games = [];
-
-    if(file_exists($game_data))
-    {
-        $games = json_decode(
-            file_get_contents($game_data),
-            true
-        ) ?? [];
+    if (file_exists($game_data)) {
+        $raw = file_get_contents($game_data);
+        $games = json_decode($raw, true) ?? [];
     }
 
     $games[] = $game;
