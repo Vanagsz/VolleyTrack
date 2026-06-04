@@ -12,20 +12,22 @@
     let milliseconds = 0
 
 let chronometer
+let isRunning = false
 
 //Functions
-    function start() {     
-        //Setting interval
-            chronometer = setInterval(() => { timer() },10)
+    function start() {
+        if (isRunning) return
+
+        isRunning = true
+        chronometer = setInterval(() => { timer() }, 10)
     }
+
     function pause() {
-        //Stoping interval
-            clearInterval(chronometer)
+        clearInterval(chronometer)
+        isRunning = false
     }
 
     function timer() {
-        //OBS: I'am using the tag "**" for agroup some lines.
-        //A comand in the tag call a function, and write in screen  
         
         //Milliseconds counting
             if((milliseconds += 10) === 1000){

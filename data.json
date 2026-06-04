@@ -18,5 +18,9 @@
     {
         "username": "weer",
         "password": "$2y$10$aGXs\/5d3KmyfOum083coA.UZKW3akHjLha1\/umryI0wcw.eP.qmSu"
+    },
+    {
+        "username": "newuser",
+        "password": "$2y$10$cvRWEFwqgmXfcTU8g3\/FZOyCbWlTYbhg.QhNCTihiEgUjmqL\/JwBu"
     }
 ]

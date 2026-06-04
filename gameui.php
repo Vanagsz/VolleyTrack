@@ -48,7 +48,6 @@
                 </a>
             </div>
         </div>
-
         <div class="container-main">
             <div class="live-indicator">● LIVE MATCH</div>
             <div class="match-grid">
