@@ -18,7 +18,7 @@
                 <div class="info">
                     <img src="VolleyTrack.png" alt="logo" class="logo">
                     <div class="desc">
-                        <h3>Create your account</h3>
+                        <h3>Log into your account</h3>
                         <p>Join VolleyTrack today and track every game.</p>
                     </div>
                 </div>

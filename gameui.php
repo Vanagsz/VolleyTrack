@@ -47,7 +47,7 @@
             <h3><?php echo $_POST['team1']; ?></h3>
             <div class="score" id="score1">0</div>
             <button class="score-btn blue-btn" onclick="changeScore()">-</button>
-            <button class="score-btn blue-btn" onclick="changeScore()">+</button>
+            <button class="score-btn blue-btn" onclick="incrementScore('team1')">+</button>
         </div>
         <div class="card timer-card">
             <div class="timer" id="stopWatch">
@@ -67,7 +67,7 @@
             <h3><?php echo $_POST['team2']; ?></h3>
             <div class="score" id="score2">0</div>
             <button class="score-btn red-btn" onclick="changeScore()">-</button>
-            <button class="score-btn red-btn" onclick="changeScore()">+</button>
+            <button class="score-btn red-btn" onclick="incrementScore('team2')">+</button>
         </div>
     </div>
     <div class="end-game-wrapper">
