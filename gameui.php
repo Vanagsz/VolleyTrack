@@ -49,10 +49,8 @@
             <div class="match-grid">
 
                 <div class="card team-card team1">
-                    <!-- PHP prints the team name from the session -->
                     <h3><?php echo htmlspecialchars($team1); ?></h3>
                     <div class="score" id="score1">0</div>
-                    <!-- Each button now tells changeScore() which team and what to do -->
                     <button class="score-btn blue-btn" onclick="changeScore(1, 'remove')">-</button>
                     <button class="score-btn blue-btn" onclick="changeScore(1, 'add')">+</button>
                 </div>
@@ -85,8 +83,6 @@
             </div>
         </div>
     </div>
-
-    <script src="lightmode.js"></script>
     <script src="chronometre.js"></script>
     <script src="pointcounter.js"></script>
 </body>
